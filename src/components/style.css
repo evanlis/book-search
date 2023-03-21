@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white
+}
+
+.container {
+    margin: 0 3vw 0 3vw;
+
+}
+
+.header {
+    background-color: #051f36;
+    color: white;
+    text-align: center;
+    min-height: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Cormorant', serif;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+.search {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.search input {
+    font-family: 'Cormorant', serif;
+    background-color: white;
+    outline: none;
+    border: none;
+    height: 4.5vh;
+    width: 40vw;
+    padding-left: 0.6vw;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input::placeholder {
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Cormorant', serif;
+    color: #051f36;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+
+.search button {
+    outline: none;
+    border: none;
+    height: 4.5vh;
+    width: 35px;
+    padding-left: 0.6vw;
+    background-color: white;
+    cursor: pointer;
+}
+
+.totalSearch {
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.row-categories {
+    display: flex;
+    justify-content: center;
+}
+
+.row-categories form {
+    padding: 0 20px 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.row-categories select {
+    margin: 1vh 0 1vh 0;
+    height: 5vh;
+    width: 13vh;
+    color: #1e4775;
+    outline: none;
+    border: none;
+    padding: 0.9vh;
+    border-radius: 5px;
+}
+
+.box-loader {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.loader {
+    margin: 20px 0 20px 0;
+    transform: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 90px;
+    border-top: #051f36 5px solid;
+    animation: loader 2s infinite;
+}
+
+.loader-more {
+    height: 30px;
+    width: 30px;
+    border-top: #051f36 2px solid;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+}
+
+.card {
+    color: #051f36;
+    background-color: #b5e0ff;
+    margin: 20px;
+    height: 300px;
+    width: 250px;
+    /* display: flex; */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.card>img {
+    width: 45%;
+    height: 50%;
+    margin: 20px 0 20px 0;
+    box-shadow: 15px 14px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+/* .img {
+    height: 200px;
+    width: 150px;
+    background-color: #ffa523;
+} */
+
+.info {
+    padding: 10px;
+    text-align: left;
+}
+
+.title {
+    font-size: 16px;
+    font-family: 'Cormorant', serif;
+    margin-bottom: 10px;
+}
+
+.categories,
+.authors {
+    font-size: 12px;
+    color: #1e4775;
+    margin-bottom: 5px;
+}
+
+
+.overly {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    font: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overly-inner {
+    width: 80%;
+    height: 100%;
+    padding: 1.5rem;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.overly-inner .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    outline: none;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    background: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.overly-inner .inner-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: left;
+    /* flex-wrap: wrap; */
+
+}
+
+.inner-box>img {
+    background: #b5e0ff;
+    padding: 30px;
+    width: 150px;
+    height: 200px;
+    margin: 20px 0 20px 0;
+    box-shadow: 0px 5px 10px 2px rgba(59, 144, 219, 0.5);
+}
+
+.overly-info {
+    padding: 50px 30px;
+}
+
+.overly-info>h1 {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.overly-info>h3 {
+    font-size: 18px;
+    color: #498dbc;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.overly-info>h4 {
+    font-size: 14px;
+    color: #1e4775;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+
+}
+
+.overly-inner>.description {
+    margin-top: 0.5rem;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.load-more {
+    text-align: center;
+}
+
+.load-more>button {
+    font-family: 'Cormorant', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #051f36;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #fc7756;
+    border: none;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@media(hover:hover) {
+    .card:hover {
+        transform: scale(0.9);
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0px 2px 10px 2px rgba(84, 80, 80, 0.6);
+    }
+
+    .load-more>button:hover {
+        background: #051f36;
+        color: #fc7756;
+    }
+}
+
+@media(max-width: 860px) {
+    .overly-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .overly-inner {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .inner-box>img {
+        padding: 0;
+        padding-right: 10px;
+        width: 100px;
+        height: 150px;
+        margin: 0;
+        background: white;
+        box-shadow: none;
+    }
+
+    .overly-inner .close {
+        font-size: 20px;
+    }
+
+    .overly-info {
+        padding: 0;
+    }
+
+    .overly-info>h1 {
+        padding-bottom: 5px;
+        font-size: 18px;
+    }
+
+    .overly-info>h3 {
+        font-size: 18px;
+        color: #498dbc;
+        font-style: italic;
+        font-weight: 100;
+    }
+
+    .overly-info>h4 {
+        font-size: 14px;
+        color: #1e4775;
+        margin-bottom: 5px;
+        text-decoration: underline;
+        text-transform: uppercase;
+
+
+    }
+
+    .overly-inner>.description {
+        margin-top: 0.5rem;
+        font-size: 14px;
+    }
+}
